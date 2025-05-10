@@ -19,3 +19,16 @@
 # How many sides? 20
 # Here are the results: [18, 19, 6, 8, 13, 6, 6, 6, 18, 12, 20, 10, 14, 8, 14, 17, 12, 15, 20, 17]
 
+import random
+
+def DiceRoll(number1, number2):
+    return random.sample(range(1, number2 + 1), number1)
+
+diceNumber = int(input("How many dice to roll? "))
+diceSides = int(input("How many sides? "))
+
+if diceNumber < 1 or diceSides < 2:
+    print("Error: Sides must be greater than 1 and dice count greater than 0.")
+else:
+    result = DiceRoll(diceNumber, diceSides)
+    print(f"Here are the results: {result}")

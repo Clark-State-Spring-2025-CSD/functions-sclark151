@@ -4,3 +4,16 @@
 #The function will continue to prompt the user to enter an integer until a proper integer is entered.
 #The most direct way of doing this would be using a try block, which has not been covered yet. You will need to research this.
 #Write supporting code to call the function, and then display the number that was entered.
+
+def CheckInput(x):
+    while True:
+        try:
+            x = int(input("Enter a valid integer: "))
+            print(f"{x} is a valid integer.")
+            break
+        except ValueError:
+            print(f"Error: Input is not a valid integer. Please try again.")
+
+inputValue = 0
+
+result = CheckInput(inputValue)
